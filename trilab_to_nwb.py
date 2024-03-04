@@ -43,7 +43,21 @@ def timeseries_to_intervals(timestamps, signal):
     intervals = diff[indices]
 
     return intervals, interval_timestamps
+
+# fuunction converts intervals to digital events with length of time
+def intervals_to_digital_events(intervals, interval_timestamps):
+    """
+    Convert intervals to digital events
+    :param intervals: intervals (np.array)
+    :param interval_timestamps: timestamps of intervals (np.array)
+    :return: digital events (np.array)
+    :return: timestamps (np.array)
+    """
+    digital_events = interval_timestamps[intervals == -1] - interval_timestamps[intervals == 1]
+    timestamps = interval_timestamps[intervals == 1]
     
+    return digital_events, timestamps
+
 
 # function to convert trilab data to NWB
 def trilab_to_nwb(directory, outdir):
@@ -90,7 +104,7 @@ def trilab_to_nwb(directory, outdir):
 
     # loop through stimulus data types
 
-    for i in ['SPOT','BUZZER','LED_','VALVE']:
+    for i in ['SPOT','BUZZER','LED_']:
 
         for j in range(1,7):
 
@@ -110,6 +124,29 @@ def trilab_to_nwb(directory, outdir):
 
             # add to NWB file
             nwbfile.add_stimulus(interval_series)
+
+    # valve reqard data
+    for j in range(1,7):
+
+        # load data
+        array = np.array(data['VALVE' + str(j)], dtype=np.int8)
+
+        # load epochs and epoch timestamps
+        intervals, interval_timestamps = timeseries_to_intervals(timestamps, array)
+        digital_events, digital_event_timestamps = intervals_to_digital_events(intervals, interval_timestamps)
+
+        # create timeseries
+        timeseries = TimeSeries(
+            name='VALVE' + str(j),
+            data=digital_events,
+            timestamps=digital_event_timestamps,
+            unit='s',
+            comments='Reward amounts are measured by how long the valve is open for',
+            description='Reward amount at VALVE' + str(j)
+        )
+
+        # add to NWB file
+        nwbfile.add_stimulus(timeseries)
 
     for i in ['GO_CUE','NOGO_CUE']:
 

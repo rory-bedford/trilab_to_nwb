@@ -12,7 +12,7 @@ from trilab_to_nwb import convert_to_nwb
 if __name__ == '__main__':
 
     # set data directories
-    basedir = Path('/cephfs2/srogers/December training data')
+    basedir = Path('/cephfs2/srogers/December_training_data')
     savedir = Path('/cephfs/rbedford/stefan_nwb')
 
     # set up logger
