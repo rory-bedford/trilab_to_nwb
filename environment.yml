@@ -1,0 +1,12 @@
+name: nwb
+channels:
+  - conda-forge
+dependencies:
+  - pynwb
+  - opencv
+  - ca-certificates
+  - openssl
+  - ocl-icd-system
+  - intel-compute-runtime
+  - pillow
+  - imageio
