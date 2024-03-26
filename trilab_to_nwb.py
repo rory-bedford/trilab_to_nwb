@@ -1,6 +1,7 @@
 from pynwb import NWBHDF5IO, NWBFile, TimeSeries
 from pynwb.misc import IntervalSeries
 from pynwb.file import Subject
+from pynwb.image import ImageSeries
 
 from datetime import datetime
 from dateutil import tz
@@ -8,6 +9,7 @@ from uuid import uuid4
 import numpy as np
 from pathlib import Path
 import json
+import shutil
 
 
 # define function that converts to nwb and logs
@@ -53,6 +55,17 @@ def intervals_to_digital_events(intervals, interval_timestamps):
     :return: digital events (np.array)
     :return: timestamps (np.array)
     """
+
+    # make sure it starts with an on time and ends with and off time
+    if intervals.shape[0] > 0:
+        if intervals[0] == -1:
+            intervals = intervals[1:]
+            interval_timestamps = interval_timestamps[1:]
+        if intervals[-1] == 1:
+            intervals = intervals[:-1]
+            interval_timestamps = interval_timestamps[:-1]
+
+    # find lengths of on times
     digital_events = interval_timestamps[intervals == -1] - interval_timestamps[intervals == 1]
     timestamps = interval_timestamps[intervals == 1]
     
@@ -210,8 +223,43 @@ def trilab_to_nwb(directory, outdir):
     # add to NWB file
     nwbfile.add_acquisition(timeseries)
 
+    # load video data
+    videofile = directory / (directory.stem + '_raw_MP.avi')
+    if not videofile.exists():
+        raise FileNotFoundError(f'Video file {videofile} not found')
+    video_timestamps = directory / ('_'.join(directory.stem.split('_')[:2]) + '_video_frame_times.json')
+    if not video_timestamps.exists():
+        raise FileNotFoundError(f'Video timestamps file {video_timestamps} not found')
+
+    # load video timestamps
+    with open(video_timestamps, 'r') as f:
+        video_timestamps = json.load(f)
+
+    # make numpy array of timestamps
+    numeric_keys = [key for key in video_timestamps.keys() if key.isdigit()]
+    sorted_keys = sorted(numeric_keys, key=lambda x: int(x))
+    timestamps = np.array([video_timestamps[key] for key in sorted_keys], dtype=np.float64)
+
+    # create ImageSeries
+    behaviour_video = ImageSeries(
+        name='behaviour_video',
+        external_file=['./' + videofile.name],
+        starting_frame=[0],
+        format='external',
+        timestamps=timestamps,
+        unit='s',
+        description='Behaviour video of mouse during trial'
+    )
+
+    # add to NWB file
+    nwbfile.add_acquisition(behaviour_video)
+
     # save NWB file
     outdir.mkdir(parents=True, exist_ok=True)
     savepath = outdir / (directory.stem + '.nwb')
     with NWBHDF5IO(savepath, 'w') as io:
         io.write(nwbfile)
+
+    # copy video
+    videopath = outdir / videofile.name
+    shutil.copy(videofile, videopath)

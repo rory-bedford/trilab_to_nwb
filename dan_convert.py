@@ -12,17 +12,14 @@ from trilab_to_nwb import convert_to_nwb
 if __name__ == '__main__':
 
     # set data directories
-    basedir = Path('/cephfs2/srogers/March_training')
-    savedir = Path('/cephfs/rbedford/stefan_march_training')
+    basedir = Path('/cephfs2/srogers/240207_Dans_data')
+    savedir = Path('/cephfs/rbedford/dan_nwb')
 
     # set up logger
     logging.basicConfig(filename='logs/logfile.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
     # get list of all files to convert
-    base = [f for f in basedir.iterdir() if f.is_dir()]
-    files =[]
-    for b in base:
-        files.extend([f for f in b.iterdir() if f.is_dir() and f.name[6] == '_'])
+    files = [f for f in basedir.iterdir() if f.is_dir() and f.stem[6] == '_']
 
     # create list of output directories
     outdirs = [savedir / f.stem for f in files]
