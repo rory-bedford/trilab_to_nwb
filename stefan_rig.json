@@ -4,100 +4,108 @@
     "reference_point": "center of scales",
     "features": [
         {
-            "name": "SPOT1",
+            "name": "right_ear",
             "source": {
-                "source_type": "stimulus"
+                "source_type": "processing",
+                "module": "behaviour_coords"
             },
             "ownership": {
-                "ownership": "world"
+                "ownership": "self",
+                "animal": 1
             },
-            "data_type": "interval",
-            "coordinates": [
-                1.366,
-                0.5,
-                0.0
-            ],
-            "description": "Intervals for SPOT1"
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for right_ear"
         },
         {
-            "name": "SPOT2",
+            "name": "spine_2",
             "source": {
-                "source_type": "stimulus"
+                "source_type": "processing",
+                "module": "behaviour_coords"
             },
             "ownership": {
-                "ownership": "world"
+                "ownership": "self",
+                "animal": 1
             },
-            "data_type": "interval",
-            "coordinates": [
-                0.0,
-                1.0,
-                0.0
-            ],
-            "description": "Intervals for SPOT2"
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for spine_2"
         },
         {
-            "name": "SPOT3",
+            "name": "spine_1",
             "source": {
-                "source_type": "stimulus"
+                "source_type": "processing",
+                "module": "behaviour_coords"
             },
             "ownership": {
-                "ownership": "world"
+                "ownership": "self",
+                "animal": 1
             },
-            "data_type": "interval",
-            "coordinates": [
-                -1.366,
-                0.5,
-                0.0
-            ],
-            "description": "Intervals for SPOT3"
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for spine_1"
         },
         {
-            "name": "SPOT4",
+            "name": "nose",
             "source": {
-                "source_type": "stimulus"
+                "source_type": "processing",
+                "module": "behaviour_coords"
             },
             "ownership": {
-                "ownership": "world"
+                "ownership": "self",
+                "animal": 1
             },
-            "data_type": "interval",
-            "coordinates": [
-                -1.366,
-                -0.5,
-                0.0
-            ],
-            "description": "Intervals for SPOT4"
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for nose"
         },
         {
-            "name": "SPOT5",
+            "name": "spine_3",
             "source": {
-                "source_type": "stimulus"
+                "source_type": "processing",
+                "module": "behaviour_coords"
             },
             "ownership": {
-                "ownership": "world"
+                "ownership": "self",
+                "animal": 1
             },
-            "data_type": "interval",
-            "coordinates": [
-                0.0,
-                -1.0,
-                0.0
-            ],
-            "description": "Intervals for SPOT5"
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for spine_3"
         },
         {
-            "name": "SPOT6",
+            "name": "spine_4",
             "source": {
-                "source_type": "stimulus"
+                "source_type": "processing",
+                "module": "behaviour_coords"
             },
             "ownership": {
-                "ownership": "world"
+                "ownership": "self",
+                "animal": 1
             },
-            "data_type": "interval",
-            "coordinates": [
-                1.366,
-                -0.5,
-                0.0
-            ],
-            "description": "Intervals for SPOT6"
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for spine_4"
+        },
+        {
+            "name": "left_ear",
+            "source": {
+                "source_type": "processing",
+                "module": "behaviour_coords"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for left_ear"
+        },
+        {
+            "name": "head",
+            "source": {
+                "source_type": "processing",
+                "module": "behaviour_coords"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Externally processed DLC coordinates for head"
         },
         {
             "name": "BUZZER1",
@@ -420,6 +428,102 @@
             "description": "Intervals for NOGO_CUE"
         },
         {
+            "name": "SPOT1",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR1"
+        },
+        {
+            "name": "SPOT2",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "description": "Intervals for SENSOR2"
+        },
+        {
+            "name": "SPOT3",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR3"
+        },
+        {
+            "name": "SPOT4",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR4"
+        },
+        {
+            "name": "SPOT5",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "description": "Intervals for SENSOR5"
+        },
+        {
+            "name": "SPOT6",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR6"
+        },
+        {
             "name": "SENSOR1",
             "source": {
                 "source_type": "acquisition"
@@ -531,5 +635,6 @@
             ],
             "description": "Scales data"
         }
-    ]
+    ],
+    "videos": []
 }

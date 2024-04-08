@@ -4,8 +4,14 @@ behave_json = {
     'specification': 'antelope-behaviour',
     'version': '0.0.1',
     'reference_point': 'center of scales',
-    'features': []
+    'features': [],
+    'videos': []
 }
+
+video = {}
+video['name'] = 'behaviour_video'
+video['description'] = 'Top down video of the behaviour'
+video['format'] = 'avi'
 
 coords = [
         [1.366, 0.5, 0.0],
@@ -16,8 +22,19 @@ coords = [
         [1.366, -0.5, 0.0]
     ]
 
+# add DLC features
+for i in ['right_ear','spine_2','spine_1','nose','spine_3','spine_4','left_ear','head']:
 
-for i in ['SPOT','BUZZER','LED_']:
+    feature = {}
+    feature['name'] = i
+    feature['source'] = {'source_type': 'processing', 'module': 'behaviour_coords'}
+    feature['ownership'] = {'ownership': 'self', 'animal':1}
+    feature['data_type'] = 'kinematics'
+    feature['description'] = 'Externally processed DLC coordinates for ' + i
+    behave_json['features'].append(feature)
+
+
+for i in ['BUZZER','LED_']:
 
     for j in range(1,7):
 
@@ -56,17 +73,19 @@ for i in ['GO_CUE', 'NOGO_CUE']:
 
     behave_json['features'].append(feature)
 
-for j in range(1,7):
+for i in ['SPOT', 'SENSOR']:
 
-    feature = {}
-    feature['name'] = 'SENSOR' + str(j)
-    feature['source'] = {'source_type': 'acquisition'}
-    feature['ownership'] = {'ownership': 'world'}
-    feature['data_type'] = 'interval'
-    feature['coordinates'] = coords[j-1]
-    feature['description'] = 'Intervals for SENSOR' + str(j)
+    for j in range(1,7):
 
-    behave_json['features'].append(feature)
+        feature = {}
+        feature['name'] = i + str(j)
+        feature['source'] = {'source_type': 'acquisition'}
+        feature['ownership'] = {'ownership': 'world'}
+        feature['data_type'] = 'interval'
+        feature['coordinates'] = coords[j-1]
+        feature['description'] = 'Intervals for SENSOR' + str(j)
+
+        behave_json['features'].append(feature)
 
 feature = {}
 feature['name'] = 'scales'
