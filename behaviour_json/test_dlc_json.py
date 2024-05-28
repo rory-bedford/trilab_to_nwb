@@ -12,6 +12,7 @@ video = {}
 video['name'] = 'behaviour_video'
 video['description'] = 'Top down video of the behaviour'
 video['format'] = 'avi'
+behave_json['videos'].append(video)
 
 coords = [
         [1.366, 0.5, 0.0],
@@ -27,14 +28,14 @@ for i in ['right_ear','spine_2','spine_1','nose','spine_3','spine_4','left_ear',
 
     feature = {}
     feature['name'] = i
-    feature['source'] = {'source_type': 'processing', 'module': 'behaviour_coords'}
+    feature['source'] = {'source_type': 'deeplabcut', 'video': 'behaviour_video'}
     feature['ownership'] = {'ownership': 'self', 'animal':1}
     feature['data_type'] = 'kinematics'
-    feature['description'] = 'Externally processed DLC coordinates for ' + i
+    feature['description'] = 'Internally processed DLC coordinates for ' + i
     behave_json['features'].append(feature)
 
 
-for i in ['BUZZER','LED_']:
+for i in ['BUZZER','LED_','SPOT']:
 
     for j in range(1,7):
 
@@ -73,7 +74,7 @@ for i in ['GO_CUE', 'NOGO_CUE']:
 
     behave_json['features'].append(feature)
 
-for i in ['SPOT', 'SENSOR']:
+for i in ['SENSOR']:
 
     for j in range(1,7):
 
@@ -97,5 +98,5 @@ feature['description'] = 'Scales data'
 
 behave_json['features'].append(feature)
 
-with open('stefan_rig.json','w') as f:
+with open('test_DLC.json','w') as f:
     json.dump(behave_json, f, indent=4)

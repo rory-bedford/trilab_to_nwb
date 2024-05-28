@@ -8,6 +8,8 @@ The script stefan_convert.py and stefan_convert.slurm just contain wrappers to r
 
 Otherwise, this repo also contains some scripts to make the custom behaviour json for importing these NWB files into Antelope (our DataJoint pipeline).
 
+The upload_antelope scripts parse a folder of NWB files and upload them to antelope with the appropriate metadata.
+
 
 
 The important info here is the schema for the NWB files:

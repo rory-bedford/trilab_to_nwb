@@ -7,7 +7,8 @@
             "name": "right_ear",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -20,7 +21,8 @@
             "name": "spine_2",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -33,7 +35,8 @@
             "name": "spine_1",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -46,7 +49,8 @@
             "name": "nose",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -59,7 +63,8 @@
             "name": "spine_3",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -72,7 +77,8 @@
             "name": "spine_4",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -85,7 +91,8 @@
             "name": "left_ear",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -98,7 +105,8 @@
             "name": "head",
             "source": {
                 "source_type": "processing",
-                "module": "behaviour_coords"
+                "module": "behaviour_coords",
+                "video": "behaviour_video"
             },
             "ownership": {
                 "ownership": "self",
@@ -300,6 +308,102 @@
             "description": "Intervals for LED_6"
         },
         {
+            "name": "SPOT1",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT1"
+        },
+        {
+            "name": "SPOT2",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "description": "Intervals for SPOT2"
+        },
+        {
+            "name": "SPOT3",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT3"
+        },
+        {
+            "name": "SPOT4",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT4"
+        },
+        {
+            "name": "SPOT5",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "description": "Intervals for SPOT5"
+        },
+        {
+            "name": "SPOT6",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT6"
+        },
+        {
             "name": "VALVE1",
             "source": {
                 "source_type": "stimulus"
@@ -428,102 +532,6 @@
             "description": "Intervals for NOGO_CUE"
         },
         {
-            "name": "SPOT1",
-            "source": {
-                "source_type": "acquisition"
-            },
-            "ownership": {
-                "ownership": "world"
-            },
-            "data_type": "interval",
-            "coordinates": [
-                1.366,
-                0.5,
-                0.0
-            ],
-            "description": "Intervals for SENSOR1"
-        },
-        {
-            "name": "SPOT2",
-            "source": {
-                "source_type": "acquisition"
-            },
-            "ownership": {
-                "ownership": "world"
-            },
-            "data_type": "interval",
-            "coordinates": [
-                0.0,
-                1.0,
-                0.0
-            ],
-            "description": "Intervals for SENSOR2"
-        },
-        {
-            "name": "SPOT3",
-            "source": {
-                "source_type": "acquisition"
-            },
-            "ownership": {
-                "ownership": "world"
-            },
-            "data_type": "interval",
-            "coordinates": [
-                -1.366,
-                0.5,
-                0.0
-            ],
-            "description": "Intervals for SENSOR3"
-        },
-        {
-            "name": "SPOT4",
-            "source": {
-                "source_type": "acquisition"
-            },
-            "ownership": {
-                "ownership": "world"
-            },
-            "data_type": "interval",
-            "coordinates": [
-                -1.366,
-                -0.5,
-                0.0
-            ],
-            "description": "Intervals for SENSOR4"
-        },
-        {
-            "name": "SPOT5",
-            "source": {
-                "source_type": "acquisition"
-            },
-            "ownership": {
-                "ownership": "world"
-            },
-            "data_type": "interval",
-            "coordinates": [
-                0.0,
-                -1.0,
-                0.0
-            ],
-            "description": "Intervals for SENSOR5"
-        },
-        {
-            "name": "SPOT6",
-            "source": {
-                "source_type": "acquisition"
-            },
-            "ownership": {
-                "ownership": "world"
-            },
-            "data_type": "interval",
-            "coordinates": [
-                1.366,
-                -0.5,
-                0.0
-            ],
-            "description": "Intervals for SENSOR6"
-        },
-        {
             "name": "SENSOR1",
             "source": {
                 "source_type": "acquisition"
@@ -636,5 +644,11 @@
             "description": "Scales data"
         }
     ],
-    "videos": []
+    "videos": [
+        {
+            "name": "behaviour_video",
+            "description": "Top down video of the behaviour",
+            "format": "avi"
+        }
+    ]
 }

@@ -1,0 +1,646 @@
+{
+    "specification": "antelope-behaviour",
+    "version": "0.0.1",
+    "reference_point": "center of scales",
+    "features": [
+        {
+            "name": "right_ear",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for right_ear"
+        },
+        {
+            "name": "spine_2",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for spine_2"
+        },
+        {
+            "name": "spine_1",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for spine_1"
+        },
+        {
+            "name": "nose",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for nose"
+        },
+        {
+            "name": "spine_3",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for spine_3"
+        },
+        {
+            "name": "spine_4",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for spine_4"
+        },
+        {
+            "name": "left_ear",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for left_ear"
+        },
+        {
+            "name": "head",
+            "source": {
+                "source_type": "deeplabcut",
+                "video": "behaviour_video"
+            },
+            "ownership": {
+                "ownership": "self",
+                "animal": 1
+            },
+            "data_type": "kinematics",
+            "description": "Internally processed DLC coordinates for head"
+        },
+        {
+            "name": "BUZZER1",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for BUZZER1"
+        },
+        {
+            "name": "BUZZER2",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "description": "Intervals for BUZZER2"
+        },
+        {
+            "name": "BUZZER3",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for BUZZER3"
+        },
+        {
+            "name": "BUZZER4",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for BUZZER4"
+        },
+        {
+            "name": "BUZZER5",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "description": "Intervals for BUZZER5"
+        },
+        {
+            "name": "BUZZER6",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for BUZZER6"
+        },
+        {
+            "name": "LED_1",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for LED_1"
+        },
+        {
+            "name": "LED_2",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "description": "Intervals for LED_2"
+        },
+        {
+            "name": "LED_3",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for LED_3"
+        },
+        {
+            "name": "LED_4",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for LED_4"
+        },
+        {
+            "name": "LED_5",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "description": "Intervals for LED_5"
+        },
+        {
+            "name": "LED_6",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for LED_6"
+        },
+        {
+            "name": "SPOT1",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT1"
+        },
+        {
+            "name": "SPOT2",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "description": "Intervals for SPOT2"
+        },
+        {
+            "name": "SPOT3",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT3"
+        },
+        {
+            "name": "SPOT4",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT4"
+        },
+        {
+            "name": "SPOT5",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "description": "Intervals for SPOT5"
+        },
+        {
+            "name": "SPOT6",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SPOT6"
+        },
+        {
+            "name": "VALVE1",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "digital",
+            "coordinates": [
+                1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Condensed milk reward at port 1"
+        },
+        {
+            "name": "VALVE2",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "digital",
+            "coordinates": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "description": "Condensed milk reward at port 2"
+        },
+        {
+            "name": "VALVE3",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "digital",
+            "coordinates": [
+                -1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Condensed milk reward at port 3"
+        },
+        {
+            "name": "VALVE4",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "digital",
+            "coordinates": [
+                -1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Condensed milk reward at port 4"
+        },
+        {
+            "name": "VALVE5",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "digital",
+            "coordinates": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "description": "Condensed milk reward at port 5"
+        },
+        {
+            "name": "VALVE6",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "digital",
+            "coordinates": [
+                1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Condensed milk reward at port 6"
+        },
+        {
+            "name": "GO_CUE",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "description": "Intervals for GO_CUE"
+        },
+        {
+            "name": "NOGO_CUE",
+            "source": {
+                "source_type": "stimulus"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "description": "Intervals for NOGO_CUE"
+        },
+        {
+            "name": "SENSOR1",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR1"
+        },
+        {
+            "name": "SENSOR2",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "description": "Intervals for SENSOR2"
+        },
+        {
+            "name": "SENSOR3",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR3"
+        },
+        {
+            "name": "SENSOR4",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                -1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR4"
+        },
+        {
+            "name": "SENSOR5",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                0.0,
+                -1.0,
+                0.0
+            ],
+            "description": "Intervals for SENSOR5"
+        },
+        {
+            "name": "SENSOR6",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "interval",
+            "coordinates": [
+                1.366,
+                -0.5,
+                0.0
+            ],
+            "description": "Intervals for SENSOR6"
+        },
+        {
+            "name": "scales",
+            "source": {
+                "source_type": "acquisition"
+            },
+            "ownership": {
+                "ownership": "world"
+            },
+            "data_type": "analog",
+            "coordinates": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "description": "Scales data"
+        }
+    ],
+    "videos": [
+        {
+            "name": "behaviour_video",
+            "description": "Top down video of the behaviour",
+            "format": "avi"
+        }
+    ]
+}
